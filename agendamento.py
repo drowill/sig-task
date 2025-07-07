@@ -1,7 +1,21 @@
 import datetime
 import pickle
 
-agendamentos = {}
+agendamentos = {
+    # 1: {
+    #     "tarefa": "Estudar Programação",
+    #     "data":datetime.datetime(2025,7,9,14,0),
+    #     "concluida": False,
+    #     "existe": True
+    # },
+    # 2: {
+    #     "tarefa": "Limpar a casa",
+    #     "data":datetime.datetime(2025,1,1,14,0),
+    #     "concluida": False,
+    #     "existe": True
+    # }
+    
+}
 
 
 try:
