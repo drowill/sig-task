@@ -1,16 +1,16 @@
-import datetime
+from datetime import datetime
 import pickle
 
 agendamentos = {
     # 1: {
     #     "tarefa": "Estudar Programação",
-    #     "data":datetime.datetime(2025,7,9,14,0),
+    #     "data":datetime(2025,7,9,14,0),
     #     "concluida": False,
     #     "existe": True
     # },
     # 2: {
     #     "tarefa": "Limpar a casa",
-    #     "data":datetime.datetime(2025,1,1,14,0),
+    #     "data":datetime(2025,1,1,14,0),
     #     "concluida": False,
     #     "existe": True
     # }
@@ -26,12 +26,17 @@ except:
 arq_agend.close()
 
 
-if datetime.datetime.now() > agendamentos[1]["data"]:
+if datetime.now() > agendamentos[1]["data"]:
     print("ja passou")
 else:
     print("ainda nao")
 
 print(agendamentos)
+
+print(agendamentos[1]['data'].strftime("%X"))
+
+
+
 
 arq_agend = open("agendamentos.dat", "wb")
 pickle.dump(agendamentos, arq_agend)
